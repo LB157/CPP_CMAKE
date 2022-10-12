@@ -1,17 +1,25 @@
-/* 6．编写一个程序，其main( )调用一个用户定义的函数（以光年值
-为参数，并返回对应天文单位的值）。该程序按下面的格式要求用户输
-入光年值，并显示结果： */
+
+/* 6．结构CandyBar包含3个成员，如编程练习5所示。请编写一个程序，创建一个包含3个元素的CandyBar数组，并将它们初始化为所选择
+的值，然后显示每个结构的内容。 */
 #include<iostream>
+#include<string>
 using namespace std;
-float transform(float a)
-{
-    return a*63240.0;
-}
+struct CandyBar{
+    string band;
+    float weight;
+    int kloli;
+    /* data */
+};
 int main()
-{
-    float a;
-    cout<<"Enter the number of light years: ";
-    cin>>a;
-    cout<<a<<"light years = "<<transform(a)<<" astronomical units. "<<endl;
+{   
+    CandyBar b[3]={{"a",1,11},{"b",2,22},{"c",3,33}};
+    CandyBar *a;
+    a = b;
+    cout<<a->band<<a->weight<<a->kloli<<endl;
+    a++;
+    cout<<a->band<<a->weight<<a->kloli<<endl;
+    a++;
+    cout<<a->band<<a->weight<<a->kloli<<endl;
+
     return 0;
 }
